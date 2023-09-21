@@ -25,8 +25,9 @@ public class DishController {
             return ResponseEntity.internalServerError().build();
         }
     }
-    @PostMapping("/dishes")
+    @PostMapping("/dish")
     public ResponseEntity<String> add(@RequestBody Dish dish){
+        System.out.println(dish);
         try{
             return ResponseEntity.ok(dishService.add(dish));
         }catch (Exception ex){

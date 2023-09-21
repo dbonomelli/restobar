@@ -2,10 +2,7 @@ package cl.musolutions.restobar.entities;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -19,5 +16,9 @@ public class Cocktail extends Product{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idCocktail;
     private float alcoholLevel;
+
+    @ManyToOne
+    @JoinColumn(name = "alcohol_type_id")
+    private AlcoholType alcoholType;
 
 }

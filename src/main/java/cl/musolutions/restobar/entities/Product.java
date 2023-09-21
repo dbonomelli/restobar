@@ -16,5 +16,5 @@ public abstract class Product {
     private String description;
     private int price;
     private int discount;
-
+    //TODO: implement boolean is available / not
 }

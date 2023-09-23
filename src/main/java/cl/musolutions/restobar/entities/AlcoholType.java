@@ -1,5 +1,6 @@
 package cl.musolutions.restobar.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,5 +23,6 @@ public class AlcoholType {
     private boolean inStock;
 
     @OneToMany(mappedBy = "alcoholType", cascade = CascadeType.ALL)
+    @JsonIgnore
     private List<Cocktail> cocktails = new ArrayList<>();
 }

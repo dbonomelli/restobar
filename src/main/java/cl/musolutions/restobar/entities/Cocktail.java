@@ -1,5 +1,6 @@
 package cl.musolutions.restobar.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 
 @Entity
-public class Cocktail extends Product{
+public class Cocktail extends Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int idCocktail;
@@ -24,6 +25,7 @@ public class Cocktail extends Product{
     private AlcoholType alcoholType;
 
     @OneToMany(mappedBy = "cocktail", cascade = CascadeType.ALL)
-    List<OrderDetails> orderDetails = new ArrayList<>();
+    @JsonIgnore
+    private List<OrderDetails> orderDetails = new ArrayList<>();
 
 }

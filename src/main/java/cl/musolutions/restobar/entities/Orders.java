@@ -19,7 +19,7 @@ import java.util.List;
 
 public class Orders {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idOrder;
 
     private Timestamp arrivedOrder;
@@ -28,9 +28,9 @@ public class Orders {
     private float total;
     private String comments;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+    //@ManyToOne
+    //@JoinColumn(name = "employee_id")
+    //private Employee employee;
 
     @ManyToOne
     @JoinColumn(name = "tables_id")

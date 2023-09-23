@@ -15,7 +15,7 @@ import java.util.List;
 @Entity
 public class Dish extends Product{
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDish;
 
     @ManyToOne

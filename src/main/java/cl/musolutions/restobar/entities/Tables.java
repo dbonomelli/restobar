@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Tables {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTable;
     private String section;
     private int capacity;

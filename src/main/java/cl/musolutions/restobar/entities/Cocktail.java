@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Cocktail extends Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCocktail;
     private float alcoholLevel;
 

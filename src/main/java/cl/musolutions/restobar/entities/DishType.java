@@ -15,7 +15,7 @@ import java.util.List;
 
 public class DishType {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idDishType;
     private String name;
 

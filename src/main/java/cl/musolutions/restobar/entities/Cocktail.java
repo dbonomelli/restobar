@@ -16,7 +16,7 @@ import java.util.List;
 @Entity
 public class Cocktail extends Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int idCocktail;
     private float alcoholLevel;
 
@@ -24,8 +24,6 @@ public class Cocktail extends Product {
     @JoinColumn(name = "alcohol_type_id")
     private AlcoholType alcoholType;
 
-    @OneToMany(mappedBy = "cocktail", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private List<OrderDetails> orderDetails = new ArrayList<>();
+
 
 }

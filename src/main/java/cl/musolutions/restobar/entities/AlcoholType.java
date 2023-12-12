@@ -16,13 +16,9 @@ import java.util.List;
 
 public class AlcoholType {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idAlcoholType;
     private String name;
     private String family;
     private boolean inStock;
-
-    @OneToMany(mappedBy = "alcoholType", cascade = CascadeType.ALL)
-    @JsonIgnore
-    private List<Cocktail> cocktails = new ArrayList<>();
 }

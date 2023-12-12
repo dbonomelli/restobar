@@ -22,9 +22,9 @@ public class OrderDetails {
     @JoinColumn(name = "orders_id")
     private Orders orders;
 
-    @ManyToOne
-    @JoinColumn(name = "cocktail_id")
-    private Cocktail cocktail;
+   // @ManyToOne
+    //@JoinColumn(name = "cocktail_id")
+    //private Cocktail cocktail;
 
     @ManyToOne
     @JoinColumn(name = "dish_id")
